@@ -9,6 +9,7 @@ app.use(methodOverride("_method"))
 //-------- SEEDS for testing -------------------------------------------
 
 const conSeed = require('./models/conSeed.js')
+const artSeed = require('./models/artSeed.js')
 
 
 
@@ -16,6 +17,7 @@ const conSeed = require('./models/conSeed.js')
 
 const Email = require('./models/emails.js')
 const Conventions = require('./models/conventions.js')
+const Articles = require('./models/articles.js');
 
 
 
@@ -27,7 +29,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/articles', (req, res) => {
-    res.render('articles.ejs')
+    Articles.find({}, (err, allArt) => {
+        res.render('articles.ejs', {
+            arts: allArt
+        })
+    })
 })
 
 app.get('/movies', (req, res) => {
@@ -50,6 +56,22 @@ app.get('/music', (req, res) => {
     res.render('music.ejs')
 })
 
+
+
+// ADD ROUTES ----------------------------------------------------
+
+app.get('/conventions/new', (req, res) => {
+    res.render('newCon.ejs')
+})
+
+app.get('/music/new', (req, res) => {
+    res.render('newMus.ejs')
+})
+
+
+
+// SHOW ROUTES ---------------------------------------------------
+
 app.get('/conventions/:id', (req, res) => {
     Conventions.findById(req.params.id, (err, goToCon) => {
          res.render('showCon.ejs', {
@@ -57,6 +79,16 @@ app.get('/conventions/:id', (req, res) => {
          })
     })
 })
+
+app.get('/articles/:id', (req, res) => {
+    Articles.findById(req.params.id, (err, goToArt) => {
+         res.render('showArt.ejs', {
+             art: goToArt
+         })
+    })
+})
+
+
 
 // POST ROUTES ------- Q: how can i change send to "sent!"
 
@@ -66,6 +98,11 @@ app.post('//', (req, res) => {
     })
 })
 
+app.post('/conventions', (req, res) => {
+    Conventions.create(req.body, (err, addCon) => {
+        res.redirect('/conventions')
+    })
+})
 
 
 
@@ -75,22 +112,24 @@ app.post('//', (req, res) => {
 
 
 
-
-// SEED DATA --------------------------------------------
+// SEED DATA -----------------------------------------------------
 
 // Conventions.create(conSeed, (error, conCreated) => {
 //     console.log('done!')
 // })
 
+// Articles.create(artSeed, (error, artCreated) => {
+//     console.log('done!')
+// })
 
 
 
-// servers ------------------------------------------------
+// servers --------------------------------------------------------
 
 app.listen(3000, () => {
-    console.log("hello")
+    console.log("listening")
 })
 
 mongoose.connect('mongodb://localhost:27017/horrorland', () => {
-  console.log('can u hear me')
+  console.log('mongo bongo')
 })

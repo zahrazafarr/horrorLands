@@ -18,5 +18,15 @@
     <h1>Articles</h1>
     <p>Your final destination to the latest horror news.</p>
     </div>
+    <ul>
+        <% for (let i = 0; i < arts.length; i++) { %>
+            <li> <a href="/articles/<%=arts[i]._id%>">
+                <%= arts[i].title %> </br>
+                <img src="<%= arts[i].img %>">  </br>
+                <%= arts[i].description %> </br>
+            </a>
+            </li>
+    <% } %>
+    </ul>
 </body>
 </html>

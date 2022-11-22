@@ -5,7 +5,7 @@ module.exports = [
     date: 'MAY 26-28',
     location: 'Irving Convention Center - IRVING, TX',  
     links: [
-        'https://texasfrightmareweekend.com/',
+        'https://texasfrightmareweekend.com/buy-tickets/',
         'https://texasfrightmareweekend.com/guests/',
         'https://texasfrightmareweekend.com/exhibitors/'
     ] 

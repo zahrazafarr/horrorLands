@@ -6,10 +6,18 @@
     min-height: 100%;
 }
 
+img {
+    height: 200px;
+    width: 200px;
+}
+
 body {
     background-color: black;
 }
 
+.email {
+    margin-top: 400px;
+}
 
 ul {
     color: white;
@@ -17,6 +25,10 @@ ul {
 
 .pages {
     color: red;
+}
+
+.text {
+    color: green;
 }
 
 .content {
