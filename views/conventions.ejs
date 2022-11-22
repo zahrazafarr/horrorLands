@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>HorrorLands - Stay Updated On All Things Horror!</title>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/articles">Articles</a>
+        <a href="/movies">Movies</a>
+        <a href="/">Home</a>
+        <a href="/memorabilia">Memorabilia</a>
+        <a href="/music">Music</a>
+    </nav>
+    <div class="pages">
+    <h1>Conventions</h1>
+    <p>2023 LIST</p>
+    </div>
+    <ul>
+        <% for (let i = 0; i < cons.length; i++) { %>
+            <li> <a href="/conventions/<%=cons[i]._id%>">
+                <%= cons[i].name %> </br>
+                <img src="<%= cons[i].img %>">  </br>
+                <%= cons[i].date %> </br>
+                <%= cons[i].location %> </br>
+            </a>
+            </li>
+    <% } %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,52 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+
+ul {
+    color: white;
+}
+
+.pages {
+    color: red;
+}
+
+.content {
+    position: fixed;
+    text-align: center;
+    color: wheat;
+    text-shadow: 0px 3px red;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 150px;
+}
+
+.nav a {
+    padding-left: 182px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 2px black;
+}
+
+.nav {
+    padding-top: 20px;
+}
+
+.email {
+    position: fixed;
+    text-align: center;
+    color: wheat;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+}
