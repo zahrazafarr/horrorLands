@@ -21,17 +21,20 @@ body {
 
 ul {
     color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .pages {
     margin-top: 40px;
     color: red;
     text-align: center;
-    font-family: 'Eater';
+    font-family: 'Nosifer', cursive;
 }
 
 .addCon {
-    color: green;
+    color: yellow;
     text-align: center;
 }
 
@@ -103,9 +106,15 @@ ul {
 
 .card {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     padding-right: 10px;
     margin-left: 50px;
     background-color: black;
     font-size: medium;
+    margin-top: 40px;
+}
+
+.btn-outline-light {
+    margin-top: 15px;
 }
