@@ -4,21 +4,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="/public/css/style.css">
         <title>HorrorLands - Stay Updated On All Things Horror!</title>
     </head>
 </head>
 <body>
-    <a href="/conventions">Return to List</a> </br>
-    <img src="<%= con.img %>"> </br>
-    <a href="<%=con.links[0]%>" target="_blank" rel="noopener noreferrer">
-        TICKETS <% con.links[0] %> 
-    </a> </br>
-    <a href="<%=con.links[1]%>" target="_blank" rel="noopener noreferrer">
-    GUESTS <% con.links[1] %> 
-    </a> </br>
-    <a href="<%=con.links[2]%>" target="_blank" rel="noopener noreferrer">
-        VENDORS <% con.links[2] %> 
-    </a></br>
+    <a href="/conventions">Return to List</a> 
+    </br>
+    <a href="/conventions/<%=con.id; %>/edit">Edit</a></br>
+    <img src="<%= con.img %>"> 
+    </br>
+    <a href="<%=con.links[0]%>" target="_blank" rel="noopener noreferrer">TICKETS</a>
+    </br>
+    <a href="<%=con.links[1]%>" target="_blank" rel="noopener noreferrer"> GUESTS</a> 
+    </br>
+    <a href="<%=con.links[2]%>" target="_blank" rel="noopener noreferrer">VENDORS </a>
+    </br>
 </body>
 </html>

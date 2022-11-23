@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>HorrorLands - Stay Updated On All Things Horror!</title>
 </head>
@@ -18,18 +19,26 @@
     <h1>Conventions</h1> 
     <p>2023 LIST</p>
     </div>
+    <div class="addCon">
+    <p>See a convention you want to keep an eye on? Add it to the list! </p> <a href="https://horrorcons.com/calendar/" class="text" target="_blank" rel="noopener noreferrer"> CLICK FOR MORE</a></br>
+    <a href="/conventions/new" class="button">Add Convention</a>
+    </div>
+    <div class="card container-fluid" style="width: 18rem;">
     <ul>
         <% for (let i = 0; i < cons.length; i++) { %>
-            <li> <a href="/conventions/<%=cons[i]._id%>">
+            <li>
+                <div class="card-body"> 
+                <a href="/conventions/<%=cons[i]._id%>">
                 <%= cons[i].name %> </br>
                 <img src="<%= cons[i].img %>">  </br>
                 <%= cons[i].date %> </br>
                 <%= cons[i].location %> </br>
             </a>
+            <form action="/conventions/<%=cons[i].id%>?_method=DELETE" method="POST"> <input type="submit" value="DELETE"></form>
+        </div>
             </li>
     <% } %>
-    <p class="text"> See a convention you want to keep an eye on? Add it to the list! </p> <a href="https://horrorcons.com/calendar/" class="text" target="_blank" rel="noopener noreferrer"> SEARCH FOR MORE</a></br>
-    <a href="/conventions/new">Add Convention</a>
     </ul>
+    </div>
 </body>
 </html>

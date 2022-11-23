@@ -58,6 +58,19 @@ app.get('/music', (req, res) => {
 
 
 
+// EDIT PAGES -----------------------------------------------------
+
+app.get('/conventions/:id/edit', (req, res) => {
+    Conventions.findById(req.params.id, (err, editCon) => {
+        res.render('editCon.ejs', {
+            edit: editCon
+        })
+    })
+})
+
+
+
+
 // ADD ROUTES ----------------------------------------------------
 
 app.get('/conventions/new', (req, res) => {
@@ -80,13 +93,6 @@ app.get('/conventions/:id', (req, res) => {
     })
 })
 
-app.get('/articles/:id', (req, res) => {
-    Articles.findById(req.params.id, (err, goToArt) => {
-         res.render('showArt.ejs', {
-             art: goToArt
-         })
-    })
-})
 
 
 
@@ -105,6 +111,24 @@ app.post('/conventions', (req, res) => {
 })
 
 
+
+// PUT ROUTES ---------------------------------------------------
+
+app.put('/conventions/:id', (req, res) => {
+    Conventions.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, upDated) => {
+        res.redirect('/conventions')
+    })
+})
+
+
+
+// DELETE ROUTES ---------------------------------------------------
+
+app.delete('/conventions/:id/', (req, res) => {
+    Conventions.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/conventions')
+    })
+})
 
 
 

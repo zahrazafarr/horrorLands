@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>HorrorLands - Stay Updated On All Things Horror!</title>
 </head>
@@ -16,17 +17,22 @@
     </nav>
     <div class="pages">
     <h1>Articles</h1>
-    <p>Your final destination to the latest horror news.</p>
     </div>
+
+    <div class="card" style="width: 18rem;">
     <ul>
         <% for (let i = 0; i < arts.length; i++) { %>
-            <li> <a href="/articles/<%=arts[i]._id%>">
+            <li>
+                <div class="card-body">
+                <a href="<%=arts[i].link%>" target="_blank" rel="noopener noreferrer">
                 <%= arts[i].title %> </br>
-                <img src="<%= arts[i].img %>">  </br>
-                <%= arts[i].description %> </br>
-            </a>
+                <img src="<%= arts[i].img %>" class="img-fluid" class="card-img-top">  </br>
+                </a>
+                <p class="card-text"><%= arts[i].description %></p>
+                 </div>
             </li>
     <% } %>
     </ul>
+</div>
 </body>
 </html>
