@@ -118,3 +118,11 @@ ul {
 .btn-outline-light {
     margin-top: 15px;
 }
+
+/* .container {
+    display: flexbox;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: hidden;
+} in articles ejs */
