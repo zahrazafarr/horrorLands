@@ -11,37 +11,37 @@
     <title>HorrorLands - Stay Updated On All Things Horror!</title>
 </head>
 <body>
-    <nav class="nav">
-        <a href="/articles">Articles</a>
-        <a href="/movies">Movies</a>
-        <a href="/">Home</a>
-        <a href="/memorabilia">Memorabilia</a>
-        <a href="/music">Music</a>
-    </nav>
+        <nav class="nav">
+            <a href="/articles">Articles</a>
+            <a href="/movies">Movies</a>
+            <a href="/">Home</a>
+            <a href="/memorabilia">Must Haves</a>
+            <a href="/music">Music</a>
+        </nav>
     <div class="pages">
-    <h1>Conventions</h1> 
-    <p>2023 LIST</p>
+        <h1>Conventions</h1> 
+        <p>2023 LIST</p>
     </div>
-    <div class="addCon">
-    <p>See a convention you want to keep an eye on? Add it to the list! </p> <a href="https://horrorcons.com/calendar/" target="_blank" rel="noopener noreferrer" class=" text btn btn-outline-warning"> CLICK FOR MORE</a></br>
-    <a href="/conventions/new" class="btn btn-outline-light btn-sm">Add Convention</a>
-    </div>
-    <div class="card container-fluid" style="width: 18rem;">
+        <div class="addCon">
+            <p>See a convention you want to keep an eye on? Add it to the list! </p> <a href="https://horrorcons.com/calendar/" target="_blank" rel="noopener noreferrer" class=" text btn btn-outline-warning"> CLICK FOR MORE</a></br>
+             <a href="/conventions/new" class="btn btn-outline-light btn-sm">Add Convention</a>
+        </div>
+<div class="card container-fluid" style="width: 18rem;">
     <ul>
         <% for (let i = 0; i < cons.length; i++) { %>
             <li>
-                <div class="card-body"> 
+            <div class="card-body"> 
                 <a href="/conventions/<%=cons[i]._id%>">
-                <%= cons[i].name %> </br>
-                <img src="<%= cons[i].img %>">  </br>
-                <%= cons[i].date %> </br>
-                <%= cons[i].location %> </br>
-            </a>
-            <form action="/conventions/<%=cons[i].id%>?_method=DELETE" method="POST"> <input type="submit" value="DELETE"></form>
-        </div>
+                    <%= cons[i].name %> </br>
+                    <img src="<%= cons[i].img %>">  </br>
+                    <%= cons[i].date %> </br>
+                    <%= cons[i].location %> </br>
+                </a>
+                    <form action="/conventions/<%=cons[i].id%>?_method=DELETE" method="POST"> <input type="submit" value="DELETE"></form>
+            </div>
             </li>
-    <% } %>
+        <% } %>
     </ul>
-    </div>
+</div>
 </body>
 </html>

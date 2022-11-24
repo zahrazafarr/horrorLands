@@ -15,12 +15,22 @@
         <a href="/articles">Articles</a>
         <a href="/movies">Movies</a>
         <a href="/conventions">Conventions</a>
-        <a href="/memorabilia">Memorabilia</a>
+        <a href="/memorabilia">Must Haves</a>
         <a href="/">Home</a>
     </nav>
-    <div class="pages">
-    <h1>Music</h1> 
-    <p>Soundtracks and moods.</p>
+<div class="pages">
+        <h1>Music</h1> 
+        <p>Soundtracks and moods</p>
+</div>
+    <div class="addCon">
+        <p><em>heard on screen.</em></p>
+    </div>
+        <a href="/music/new" class="btn btn-outline-light btn-sm musicBtn">Recommend a Song</a>
+    <div class="videos">
+            <% for (let i = 0; i < tube.length; i++) { %>
+        <iframe width="320" height="300" src="<%= tube[i].link %>" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <form action="/music/<%=tube[i].id%>?_method=DELETE" method="POST"> <input type="submit" value="X" class="btn btn-danger btn-sm"></form>
+            <% } %>
     </div>
 </body>
 </html>

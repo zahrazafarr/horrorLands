@@ -129,3 +129,14 @@ ul {
 .btn-outline-light {
     margin-top: 15px;
 }
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    margin: 10px;
+}
+
+.musicBtn {
+    margin-left: 640px;
+}

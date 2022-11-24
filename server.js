@@ -11,7 +11,7 @@ app.use(methodOverride("_method"))
 const conSeed = require('./models/conSeed.js')
 const artSeed = require('./models/artSeed.js')
 const memSeed = require('./models/memSeed.js')
-
+const musSeed = require('./models/muSeed.js')
 
 
 //-------- DATA ------------------------------------------------------
@@ -19,8 +19,8 @@ const memSeed = require('./models/memSeed.js')
 const Email = require('./models/emails.js')
 const Conventions = require('./models/conventions.js')
 const Articles = require('./models/articles.js');
-const Memorabilia = require('./models/memorabilia.js')
-
+const Music = require('./models/music.js')
+const Memorabilia = require('./models/memorabilia.js');
 
 
 
@@ -59,7 +59,11 @@ app.get('/memorabilia', (req, res) => {
 })
 
 app.get('/music', (req, res) => {
-    res.render('music.ejs')
+    Music.find({}, (err, allSongs) => {
+        res.render('music.ejs', {
+            tube: allSongs
+        })
+    })
 })
 
 
@@ -83,9 +87,9 @@ app.get('/conventions/new', (req, res) => {
     res.render('newCon.ejs')
 })
 
-// app.get('/music/new', (req, res) => {
-//     res.render('newMus.ejs')
-// })
+app.get('/music/new', (req, res) => {
+    res.render('newMus.ejs')
+})
 
 
 
@@ -102,7 +106,7 @@ app.get('/conventions/:id', (req, res) => {
 
 
 
-// POST ROUTES ------- Q: how can i change send to "sent!"
+// POST ROUTES --------------------------------------------------
 
 app.post('//', (req, res) => {
     Email.create(req.body, (err, addedEmail) => {
@@ -116,6 +120,12 @@ app.post('/conventions', (req, res) => {
     })
 })
 
+app.post('/music', (req, res) => {
+    Music.create(req.body, (err, addSong) => {
+        res.redirect('/music')
+    })
+})
+
 
 
 // PUT ROUTES ---------------------------------------------------
@@ -123,6 +133,12 @@ app.post('/conventions', (req, res) => {
 app.put('/conventions/:id', (req, res) => {
     Conventions.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, upDated) => {
         res.redirect('/conventions')
+    })
+})
+
+app.put('/music/:id', (req, res) => {
+    Music.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, upDated) => {
+        res.redirect('/music')
     })
 })
 
@@ -136,7 +152,11 @@ app.delete('/conventions/:id/', (req, res) => {
     })
 })
 
-
+app.delete('/music/:id/', (req, res) => {
+    Music.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/music')
+    })
+})
 
 
 
@@ -152,9 +172,14 @@ app.delete('/conventions/:id/', (req, res) => {
 //     console.log('done!')
 // })
 
+// Music.create(musSeed, (error, musCreated) => {
+//     console.log('done!')
+// })
+
 // Memorabilia.create(memSeed, (error, memCreated) => {
 //     console.log('done!')
 // })
+
 
 // servers --------------------------------------------------------
 
