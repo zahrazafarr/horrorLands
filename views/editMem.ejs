@@ -10,11 +10,12 @@
         <h1>Item Availability</h1>
         <form action="/memorabilia/<%=item.id%>?_method=PUT" method="POST">
             Is this item still available for purchase?
-            <input type="checkbox" name="canBuy">
+            <input type="checkbox" name="canBuy"
 
                 <% if (item.canBuy === true){ %>
                     checked
                 <% } %>
+                />
             <br/>
             <input type="submit" name="" value="Change Status"/>
         </form>

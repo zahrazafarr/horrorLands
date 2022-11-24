@@ -145,10 +145,15 @@ app.post('/music', (req, res) => {
     })
 })
 
-app.post('/memorabilia', (req, res) => {
-    Memorabilia.create(req.body, (err, addMem) => {
-        res.redirect('/memorabilia')
-    })
+app.post('/memorabilia/', (req, res) => {
+    if (req.body.canBuy === 'on') {
+        req.body.canBuy = true;
+    } else {
+        req.body.canBuy = false
+    }  
+    Memorabilia.create(req.body, (error, fixMem) => {
+        res.redirect('/memorabilia');
+    })    
 })
 
 
@@ -166,11 +171,18 @@ app.put('/music/:id', (req, res) => {
     })
 })
 
+
 app.put('/memorabilia/:id', (req, res) => {
-    Memorabilia.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, upDated) => {
-        res.redirect('/memorabilia')
-    })
-})
+    if(req.body.canBuy === 'on') {
+        req.body.canBuy = true;
+    } else {
+        req.body.canBuy = false;
+    }
+    Memorabilia.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedItem) => {
+         res.redirect(`/memorabilia/${req.params.id}`);
+     });
+});
+
 
 
 // DELETE ROUTES ---------------------------------------------------
