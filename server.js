@@ -10,6 +10,7 @@ app.use(methodOverride("_method"))
 
 const conSeed = require('./models/conSeed.js')
 const artSeed = require('./models/artSeed.js')
+const memSeed = require('./models/memSeed.js')
 
 
 
@@ -18,6 +19,7 @@ const artSeed = require('./models/artSeed.js')
 const Email = require('./models/emails.js')
 const Conventions = require('./models/conventions.js')
 const Articles = require('./models/articles.js');
+const Memorabilia = require('./models/memorabilia.js')
 
 
 
@@ -49,7 +51,11 @@ app.get('/conventions', (req, res) => {
 })
 
 app.get('/memorabilia', (req, res) => {
-    res.render('memorabilia.ejs')
+    Memorabilia.find({}, (err, allMem) => {
+        res.render('memorabilia.ejs', {
+            mems: allMem
+        })
+    })
 })
 
 app.get('/music', (req, res) => {
@@ -77,9 +83,9 @@ app.get('/conventions/new', (req, res) => {
     res.render('newCon.ejs')
 })
 
-app.get('/music/new', (req, res) => {
-    res.render('newMus.ejs')
-})
+// app.get('/music/new', (req, res) => {
+//     res.render('newMus.ejs')
+// })
 
 
 
@@ -146,7 +152,9 @@ app.delete('/conventions/:id/', (req, res) => {
 //     console.log('done!')
 // })
 
-
+// Memorabilia.create(memSeed, (error, memCreated) => {
+//     console.log('done!')
+// })
 
 // servers --------------------------------------------------------
 

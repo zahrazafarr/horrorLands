@@ -20,10 +20,13 @@ body {
 }
 
 ul {
-    color: black;
+    color: lightgray;
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
 }
 
 .pages {
@@ -90,10 +93,17 @@ ul {
 
 .card-text {
    color: black;
+   font-size: medium;
+   padding-right: 33px;
+   padding-top: 10px;
+
+}
+
+.artTitle {
+    font-size: larger;
 }
 
 .card-img-top {
-    border-style: groove;
     width: 100%;
 }
 
@@ -101,6 +111,8 @@ ul {
     text-align: center;
     background-color:lightgray;
     border-radius: 20px;
+    margin: 20px; 
+    padding-bottom: 1px;
     
 }
 
@@ -108,21 +120,12 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-right: 10px;
-    margin-left: 50px;
-    background-color: black;
+    margin-left: -30px;
     font-size: medium;
     margin-top: 40px;
+    background-color: black;
 }
 
 .btn-outline-light {
     margin-top: 15px;
 }
-
-/* .container {
-    display: flexbox;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    overflow-y: hidden;
-} in articles ejs */
