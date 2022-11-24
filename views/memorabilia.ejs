@@ -22,5 +22,12 @@
     <h1>Collectibles</h1> 
     <p>Memorabilia and more.</p>
     </div>
+    <div class="videos">
+        <% for (let i = 0; i < mems.length; i++) { %>
+            <a href="/memorabilia/<%=mems[i]._id%>">
+    <img src="<%=mems[i].img%>">
+    </a>
+        <% } %>
+</div>
 </body>
 </html>

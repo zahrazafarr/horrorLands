@@ -84,6 +84,13 @@ app.get('/conventions/:id/edit', (req, res) => {
     })
 })
 
+app.get('/memorabilia/:id/edit', (req, res) => {
+    Memorabilia.findById(req.params.id, (err, editMem) => {
+        res.render('editMem.ejs', {
+            item: editMem
+        })
+    })
+})
 
 
 
@@ -109,7 +116,13 @@ app.get('/conventions/:id', (req, res) => {
     })
 })
 
-
+app.get('/memorabilia/:id', (req, res) => {
+    Memorabilia.findById(req.params.id, (err, goToMem) => {
+         res.render('showMem.ejs', {
+             mem: goToMem
+         })
+    })
+})
 
 
 // POST ROUTES --------------------------------------------------
@@ -132,6 +145,11 @@ app.post('/music', (req, res) => {
     })
 })
 
+app.post('/memorabilia', (req, res) => {
+    Memorabilia.create(req.body, (err, addMem) => {
+        res.redirect('/memorabilia')
+    })
+})
 
 
 // PUT ROUTES ---------------------------------------------------
@@ -148,6 +166,11 @@ app.put('/music/:id', (req, res) => {
     })
 })
 
+app.put('/memorabilia/:id', (req, res) => {
+    Memorabilia.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, upDated) => {
+        res.redirect('/memorabilia')
+    })
+})
 
 
 // DELETE ROUTES ---------------------------------------------------
@@ -182,12 +205,12 @@ app.delete('/music/:id/', (req, res) => {
 //     console.log('done!')
 // })
 
-// Memorabilia.create(memSeed, (error, memCreated) => {
-//     console.log('done!')
-// })
-
 // Movies.create(movSeed, (error, movCreated) => {
 //   console.log('done!')
+// })
+
+// Memorabilia.create(memSeed, (error, memCreated) => {
+//     console.log('done!')
 // })
 
 

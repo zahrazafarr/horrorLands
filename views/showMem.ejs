@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+        <title>HorrorLands - Stay Updated On All Things Horror!</title>
+    </head>
+    <body>
+        <nav>
+            <a href="/memorabilia">Return to Items</a>
+        </nav>
+        <h1><%=mem.product%></h1>
+        <img src="<%=mem.img %>">
+         <%=mem.price %>
+        <% if(mem.canBuy === true){ %>
+            This item is now available.
+        <%} else {%>
+            This item is now sold out.
+        <%}%>
+        <a href="/memorabilia/<%=mem.id; %>/edit" class="btn btn-warning btn-sm col-sm">Edit Availability</a>
+    </body>
+</html>

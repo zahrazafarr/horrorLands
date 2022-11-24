@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+        <title>HorrorLands - Stay Updated On All Things Horror!</title>
+    </head>
+    <body>
+        <h1>Item Availability</h1>
+        <form action="/memorabilia/<%=item.id%>?_method=PUT" method="POST">
+            Is this item still available for purchase?
+            <input type="checkbox" name="canBuy">
+
+                <% if (item.canBuy === true){ %>
+                    checked
+                <% } %>
+            <br/>
+            <input type="submit" name="" value="Change Status"/>
+        </form>
+    </body>
+</html>
