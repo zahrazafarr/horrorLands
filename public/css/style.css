@@ -26,7 +26,6 @@ ul {
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
 }
 
 .pages {
@@ -135,6 +134,20 @@ ul {
     flex-wrap: wrap;
     padding-top: 60px;
     margin: 10px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 60px;
+    margin: 10px;
+}
+
+.item {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
 }
 
 .musicBtn {

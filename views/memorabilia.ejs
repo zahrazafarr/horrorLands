@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Eater&family=Emilys+Candy&family=Nosifer&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>HorrorLands - Stay Updated On All Things Horror!</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&family=Eater&family=Emilys+Candy&family=Nosifer&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>HorrorLands - Stay Updated On All Things Horror!</title>
+    </head>
 <body>
     <nav class="nav">
-        <a href="/articles">Articles</a>
-        <a href="/movies">Movies</a>
-        <a href="/conventions">Conventions</a>
-        <a href="/">Home</a>
-        <a href="/music">Music</a>
+            <a href="/articles">Articles</a>
+            <a href="/movies">Movies</a>
+            <a href="/conventions">Conventions</a>
+            <a href="/">Home</a>
+            <a href="/music">Music</a>
     </nav>
-    <div class="pages">
-    <h1>Collectibles</h1> 
-    <p>Memorabilia and more.</p>
+        <div class="pages">
+                <h1>Junkyard</h1> 
+            <p>Collectibles and more.</p>
+        </div>
+    <div class="addCon white">
+         <p>Click image for item details.</p>
     </div>
-    <div class="videos">
-        <% for (let i = 0; i < mems.length; i++) { %>
-            <a href="/memorabilia/<%=mems[i]._id%>">
-    <img src="<%=mems[i].img%>">
-    </a>
-        <% } %>
-</div>
+         <div class="items">
+             <% for (let i = 0; i < mems.length; i++) { %>
+            <div class="item">
+            <a href="/memorabilia/<%=mems[i]._id%>"><img src="<%=mems[i].img%>"></a>
+            </div>
+            <% } %>
+        </div>
 </body>
 </html>
