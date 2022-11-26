@@ -20,12 +20,11 @@ body {
 }
 
 ul {
-    color: lightgray;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: nowrap;
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
 }
 
 .pages {
@@ -90,14 +89,6 @@ ul {
     padding-top: 40px;
 }
 
-.card-text {
-   color: black;
-   font-size: medium;
-   padding-right: 33px;
-   padding-top: 10px;
-
-}
-
 .artTitle {
     font-size: larger;
 }
@@ -106,19 +97,29 @@ ul {
     width: 100%;
 }
 
+
+.card-text {
+    color: black;
+    font-size: medium;
+    padding-right: 33px;
+    padding-top: 10px;
+}
+
 .card-body {
     text-align: center;
     background-color:lightgray;
     border-radius: 20px;
     margin: 20px; 
     padding-bottom: 1px;
-    
+    color: lightgray;
+    list-style: none;
 }
 
 .card {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     margin-left: -30px;
     font-size: medium;
     margin-top: 40px;
@@ -152,4 +153,14 @@ ul {
 
 .musicBtn {
     margin-left: 640px;
+}
+
+.carousel-inner {
+    padding-left: 620px;
+    padding-bottom: 200px;
+    padding-top: 60px;
+}
+
+.carousel-indicators {
+    margin-bottom: 70px;
 }

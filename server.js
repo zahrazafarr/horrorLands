@@ -12,7 +12,6 @@ const conSeed = require('./models/conSeed.js')
 const artSeed = require('./models/artSeed.js')
 const memSeed = require('./models/memSeed.js')
 const musSeed = require('./models/muSeed.js')
-const movSeed = require('./models/movSeed.js')
 
 
 //-------- DATA ------------------------------------------------------
@@ -22,7 +21,6 @@ const Conventions = require('./models/conventions.js')
 const Articles = require('./models/articles.js');
 const Music = require('./models/music.js')
 const Memorabilia = require('./models/memorabilia.js');
-const Movies = require('./models/movies.js')
 
 
 
@@ -41,11 +39,7 @@ app.get('/articles', (req, res) => {
 })
 
 app.get('/movies', (req, res) => {
-    Movies.find({}, (err, allMovs) => {
-        res.render('movies.ejs', {
-            movs: allMovs
-        })
-    })
+        res.render('movies.ejs')
 })
 
 app.get('/conventions', (req, res) => {
@@ -215,10 +209,6 @@ app.delete('/music/:id/', (req, res) => {
 
 // Music.create(musSeed, (error, musCreated) => {
 //     console.log('done!')
-// })
-
-// Movies.create(movSeed, (error, movCreated) => {
-//   console.log('done!')
 // })
 
 // Memorabilia.create(memSeed, (error, memCreated) => {
