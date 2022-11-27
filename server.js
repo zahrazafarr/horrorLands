@@ -23,7 +23,6 @@ const Music = require('./models/music.js')
 const Memorabilia = require('./models/memorabilia.js');
 
 
-
 // GET ROUTES ------------------------------------------------
 
 app.get('/', (req, res) => {
@@ -67,7 +66,6 @@ app.get('/music', (req, res) => {
 })
 
 
-
 // EDIT PAGES -----------------------------------------------------
 
 app.get('/conventions/:id/edit', (req, res) => {
@@ -87,7 +85,6 @@ app.get('/memorabilia/:id/edit', (req, res) => {
 })
 
 
-
 // ADD ROUTES ----------------------------------------------------
 
 app.get('/conventions/new', (req, res) => {
@@ -97,7 +94,6 @@ app.get('/conventions/new', (req, res) => {
 app.get('/music/new', (req, res) => {
     res.render('newMus.ejs')
 })
-
 
 
 // SHOW ROUTES ---------------------------------------------------
@@ -165,7 +161,6 @@ app.put('/music/:id', (req, res) => {
     })
 })
 
-
 app.put('/memorabilia/:id', (req, res) => {
     if(req.body.canBuy === 'on') {
         req.body.canBuy = true;
@@ -176,7 +171,6 @@ app.put('/memorabilia/:id', (req, res) => {
          res.redirect(`/memorabilia/${req.params.id}`);
      });
 });
-
 
 
 // DELETE ROUTES ---------------------------------------------------
@@ -192,9 +186,6 @@ app.delete('/music/:id/', (req, res) => {
         res.redirect('/music')
     })
 })
-
-
-
 
 
 // SEED DATA -----------------------------------------------------
