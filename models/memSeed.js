@@ -1,6 +1,7 @@
 module.exports = [
     {
         img: "https://www.trickortreatstudios.com/media/catalog/product/cache/1da4909b8e3ea5eea17a9fb4c6e4a516/_/0/_0007_seedofchucky-glen-productiondoll.png",
+        showImg: "https://www.trickortreatstudios.com/media/catalog/product/cache/1da4909b8e3ea5eea17a9fb4c6e4a516/_/0/_0007_seedofchucky-glen-productiondoll.png",
         product: "SEED OF CHUCKY - GLEN DOLL",
         price: "$499.99",
         linkToBuy: "https://www.trickortreatstudios.com/",
@@ -9,6 +10,7 @@ module.exports = [
     {
         img: "./img/tonguephone.png",
         product: "A Nightmare On Elm Street Tongue Phone Signed By Robert Englund",
+        showImg: "https://i.ebayimg.com/images/g/3~cAAOSwV~BhGUwG/s-l500.jpg",
         price: "$675",
         linkToBuy: "https://www.ebay.com/itm/265364008918",
         canBuy: true
@@ -17,6 +19,7 @@ module.exports = [
     {
         img: "./img/robzomb.png",
         product: "Demon Speeding - Rob Zombie Figurine",
+        showImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5801aa18-daa3-42ae-a579-a35793f5b571/d4irfgx-0e1aea3b-a1ae-4bca-80e5-2b0d803b2886.jpg/v1/fill/w_900,h_1169,q_75,strp/rob_zombie_demon_speeding_statue_barsom_by_bars0m_d4irfgx-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU4MDFhYTE4LWRhYTMtNDJhZS1hNTc5LWEzNTc5M2Y1YjU3MVwvZDRpcmZneC0wZTFhZWEzYi1hMWFlLTRiY2EtODBlNS0yYjBkODAzYjI4ODYuanBnIiwiaGVpZ2h0IjoiPD0xMTY5Iiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiJcL3dtXC81ODAxYWExOC1kYWEzLTQyYWUtYTU3OS1hMzU3OTNmNWI1NzFcL2JhcnMwbS00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.2FVh2cnVs4UX_bY5Tnz_86V-9ix_vKt-oPbSrjcYnIw",
         price: "Price unknown.",
         linkToBuy: "https://www.deviantart.com/bars0m/art/Rob-Zombie-Demon-speeding-statue-Barsom-273377553",
         canBuy: false
@@ -24,6 +27,7 @@ module.exports = [
     {
         img: "./img/chuckyskull.png",
         product: "Chucky's Good Guy Skull",
+        showImg: "https://www.sideshow.com/cdn-cgi/image/width=700,quality=80,f=auto/https://www.sideshow.com/storage/product-images/908117/chucky-skull-good-guys-skull_childs-play-2_gallery_606745e9775b2.jpg",
         price: "$79.99",
         linkToBuy: "https://www.sideshow.com/collectibles/childs-play-2-chucky-skull-good-guys-skull-trick-or-treat-studios-908117",
         canBuy: true,
@@ -31,6 +35,7 @@ module.exports = [
     {
         img: "./img/vampy.png",
         product: "Vampirella (Color Variant)",
+        showImg: "https://www.sideshow.com/cdn-cgi/image/width=667,quality=80,f=auto/https://www.sideshow.com/storage/product-images/908925/vampirella-color-variant_vampirella_gallery_60f206f2cc692.jpg",
         price: "$175",
         linkToBuy: "https://www.sideshow.com/collectibles/vampirella-vampirella-color-variant-dynamite-entertainment-908925",
         canBuy: true,
@@ -38,6 +43,7 @@ module.exports = [
     {
         img: "./img/teddyjason.png",
         product: "Ultimate Jason Voorhees Figure - Freddy vs Jason",
+        showImg: "https://bbts1.azureedge.net/images/p/full/2019/03/d29e93df-e346-48fa-83be-b066a552b0e2.jpg",
         price: "$37.99",
         linkToBuy: "https://www.bigbadtoystore.com/Product/VariationDetails/91180",
         canBuy: true,
@@ -45,6 +51,7 @@ module.exports = [
     {
         img: "./img/grem.png",
         product: "Gremlin (3D Glasses)",
+        showImg: "https://bbts1.azureedge.net/images/p/full/2021/05/81b0de6b-3015-481b-b6c6-b4861dbbe269.jpg",
         price: "$10.99",
         linkToBuy: "https://www.bigbadtoystore.com/product/variationdetails/165161?utm_source=google&utm_medium=opla&utm_term=GRE-165161",
         canBuy: true,
@@ -52,6 +59,7 @@ module.exports = [
     {
         img: "./img/creep.png",
         product: 'Creepshow - 7" Scale Action Figure',
+        showImg: "https://cdn.shopify.com/s/files/1/0565/3073/1187/products/N60795_1_500x.jpg?v=1657147648",
         price: "$27.99",
         linkToBuy: "https://costumes.com/products/creepshow-7-scale-action-figure-the-creep-n60795?gclid=CjwKCAiA7IGcBhA8EiwAFfUDsXKAFR8L4ZIvSuAqgOIp-SR5BYqN5fQW9dDzaAvt1j1Oo_JwvxFX1hoCvpYQAvD_BwE",
         canBuy: true,
@@ -59,6 +67,7 @@ module.exports = [
     {
         img: "./img/clowny.png",
         product: "Captain Spaulding",
+        showImg: "https://i.ebayimg.com/images/g/OMgAAOSw6UdjXFp8/s-l500.jpg",
         price: "$79.99",
         linkToBuy: "https://www.ebay.com/itm/225227123735?chn=ps&mkevt=1&mkcid=28&srsltid=AYJSbAceFNEhH25ImhQ-b3rOfzBfnZt6zeqbYeC7id8y11uyqey0JgTfw10",
         canBuy: true,
@@ -66,6 +75,7 @@ module.exports = [
     {
         img: "./img/johnkramer.png",
         product: 'John Kramer 6" Action Figure',
+        showImg: "https://www.dhresource.com/webp/m/0x0/f2/albu/g20/M01/95/7F/rBVaqWHx0HmAeYZEAAc7LwEsuj4236.jpg",
         price: "$53.26",
         linkToBuy: "https://www.dhgate.com/product/classic-horror-movie-saw-john-krammer-6-quot/752522382.html?f=bm%7cGMC%7cpla%7c18242404003%7c%7c752522382%7c%7c102003013%7cUS%7cnugetsshoes%7cc%7c2%7c&utm_source=pla&utm_medium=GMC&utm_campaign=nugetsshoes&utm_term=752522382&gclid=CjwKCAiA7IGcBhA8EiwAFfUDsb0C40AD5qx8Fvhu_Stl2hyeJl7ugD1omrWm_7_HUIzdPa3iD3tvBxoCNrQQAvD_BwE",
         canBuy: true,
@@ -73,6 +83,7 @@ module.exports = [
     {
         img: "./img/shaun.png",
         product: "Shaun of The Dead: Zombie Ed (Unreleased Version)",
+        showImg: "https://news.toyark.com/wp-content/uploads/sites/4/2016/01/NECA-Cult-Classics-Shaun-of-the-Dead-Unreleased-Zombie-Ed.jpg",
         price: "$39.99",
         linkToBuy: "https://www.amazon.com/Factory-Entertainment-Shaun-Dead-Zombie/dp/B00EWNJLW4",
         canBuy: false,
@@ -80,6 +91,7 @@ module.exports = [
     {
         img: "./img/flyboy.png",
         product: "'Flyboy' - Dawn of the Dead",
+        showImg: "https://m.media-amazon.com/images/I/51le1iTX9oL._AC_.jpg",
         price: "$125.67",
         linkToBuy: "https://www.amazon.com/Max-Factory-Flyboy-Zombie-Action/dp/B00JUEBZ1K",
         canBuy: true,
@@ -87,6 +99,7 @@ module.exports = [
     {
         img: "./img/texas.png",
         product: "Mezco Screen Grabs - TX Chainsaw Massacre",
+        showImg: "https://i.ebayimg.com/images/g/paEAAOSwkYpfvrOc/s-l300.jpg",
         price: "$275",
         linkToBuy: "https://www.ebay.com/itm/233796783827",
         canBuy: true,
@@ -94,6 +107,7 @@ module.exports = [
     {
         img: "./img/sleepy.png",
         product: "Mezco Screen Grabs - Nightmare On Elm Street",
+        showImg: "https://i.ebayimg.com/images/g/RXsAAOSwm0diqNgU/s-l1600.jpg",
         price: "$219.50",
         linkToBuy: "https://www.ebay.com/itm/295038828387",
         canBuy: true,
@@ -101,6 +115,7 @@ module.exports = [
     {
         img: "./img/freddycar.png",
         product: "Freddy's 1958 Cadillac",
+        showImg: "https://media.entertainmentearth.com/assets/images/09bcc1a3613640dbb8adaedc282711e4lg.jpg",
         price: "$27.99",
         linkToBuy: "https://www.entertainmentearth.com/product/hollywood-rides-nightmare-on-elm-street-1958-cadillac-with-freddy-figure/jd31102",
         canBuy: true,
@@ -108,6 +123,7 @@ module.exports = [
     {
         img: "./img/elvira.png",
         product: "ELVIRA (PRE-ORDER)",
+        showImg: "https://media.entertainmentearth.com/assets/images/79837d3082484ac99eb931fca6100be2lg.jpg",
         price: "$250",
         linkToBuy: "https://www.entertainmentearth.com/product/elvira-mistress-of-the-dark-static-six-16-scale-statue/mz14016",
         canBuy: true,
@@ -115,6 +131,7 @@ module.exports = [
     {
         img: "./img/raiserplush.png",
         product: "Pinhead Plush",
+        showImg: "https://i.etsystatic.com/6093761/r/il/593ce2/3096183497/il_794xN.3096183497_emyg.jpg",
         price: "$32",
         linkToBuy: "https://www.etsy.com/listing/270400386/horror-icon-collection-hellraiser",
         canBuy: true,
@@ -122,6 +139,7 @@ module.exports = [
     {
         img: "./img/ghosty.png",
         product: "Toony Terrors - Ghostface",
+        showImg: "https://bbts1.azureedge.net/images/p/full/2020/07/369e5731-84b3-401d-bd42-374b60b1d709.jpg",
         price: "$17.99",
         linkToBuy: "https://www.bigbadtoystore.com/Product/VariationDetails/131062",
         canBuy: true,
@@ -129,6 +147,7 @@ module.exports = [
     {
         img: "./img/casey.png",
         product: "CLAYGUY- Casey",
+        showImg: "https://www.clayguy.com/sitebuildercontent/sitebuilderpictures/s21.jpg",
         price: "Price unknown.",
         linkToBuy: "https://www.clayguy.com/id11.html",
         canBuy: false,
@@ -136,6 +155,7 @@ module.exports = [
     {
         img: "./img/spooky.png",
         product: "Spooky Island Disco Ball",
+        showImg: "https://orlandoinformer.com/wp-content/uploads/2018/06/Spooky-Island-from-Scooby-Doo-3-1024x576.jpg",
         price: "Not for sale.",
         linkToBuy: "https://scoobydoo.fandom.com/wiki/Spooky_Island",
         canBuy: false

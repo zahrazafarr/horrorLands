@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const memSchema = new mongoose.Schema ({
         img: String,
+        showImg: String,
         product: String,
         price: String,
         linkToBuy: String,
