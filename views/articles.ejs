@@ -21,21 +21,26 @@
     <div class="pages">
          <h1>Articles</h1>
     </div>
-<div class="card" style="width: 20rem;">
-    <ul>
-        <% for (let i = 0; i < arts.length; i++) { %>
-            <li> 
-                <div class="card-body" style="width: 18rem; height: 21rem;">
-                    <a href="<%=arts[i].link%>" target="_blank" rel="noopener noreferrer" class="artTitle">
-                        <%= arts[i].title %> </br>
-                         <img src="<%= arts[i].img %>" class="img-fluid card-img-top" style="width: 15rem; height: 8rem;">
-                    </a>
-                         <p class="card-text" style="width: 18rem; height: 20rem;"><%= arts[i].description %></p>
-                </div>
-            </li>
+    <div class="addCon">
+        <p><em>Click to read.</em></p> 
+    </div>
+<div class="container">
+    <div class="card-group">
+        <div class="row">
+                <% for (let i = 0; i < arts.length; i++) { %>
+            <div class="col-lg-3 col-md-6">
+            <div class="card mt-3">
+                    <a href="<%=arts[i].link%>" target="_blank" rel="noopener noreferrer">
+                    <img class="card-img-top img-thumbnail" src="<%= arts[i].img %>" alt="Card image cap" style="width: 15rem; height: 9rem;">
+                <div class="card-body">
+                <h5 class="card-title"><%= arts[i].title %></h5></a>
+                <p class="card-text"><%= arts[i].description %></p>
+            </div>
+            </div>
+        </div>
         <% } %>
-    </ul>
+    </div>
 </div>
-
+</div>
 </body>
 </html>

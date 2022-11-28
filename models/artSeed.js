@@ -57,6 +57,18 @@ module.exports = [
         title: "Bill Skarsgard and Lily-Rose Depp in Talks to Lead Robert Eggers' 'Nosferatu'",
         img: "https://cdn.mos.cms.futurecdn.net/oWyYzbosaPovDhXG3VbAsG-970-80.jpg.webp",
         link: "https://deadline.com/2022/09/bill-skarsgard-lily-rose-depp-robert-eggers-nosferatu-focus-1235131507/",
-        description: "YESSSSS"
+        description: "*heart-eye emoji*"
+    },
+    {
+        title: "How Scary Movies Could Help Overcome Real-Life Trauma",
+        img: "https://images.squarespace-cdn.com/content/v1/5914e3e615cf7dcde4e55bc4/1507004101766-PE3LMFCFS1IGSMTQPRCI/9e50fd1d6a19232dc8d6ea67c6e36e4b.jpg?format=500w",
+        link: "https://www.nationalgeographic.com/science/article/how-horror-movies-can-help-overcome-trauma-and-relieve-stress",
+        description: "Scream therapy?... although not scientifically proven, many researchers understand the treatment potential."
+    },
+    {
+        title: "The Mean One: Unofficial Grinch Horror Movie",
+        img: "https://www.joblo.com/wp-content/uploads/2022/11/the-mean-one-grinch-horror-movie-1024x538.jpg",
+        link: "https://www.joblo.com/the-mean-one-unofficial-grinch-horror-movie-release/",
+        description: "No beloved childhood character is safe."
     }
 ]

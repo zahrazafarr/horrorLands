@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>HorrorLands - Stay Updated On All Things Horror!</title>
 </head>
-<body>
+<body class="conPage">
         <nav class="nav">
             <a href="/articles">Articles</a>
             <a href="/movies">Movies</a>
@@ -23,25 +23,29 @@
         <p>2023 LIST</p>
     </div>
         <div class="addCon">
-            <p>Have a convention you want to keep an eye on? Add it to the list! </p> <a href="https://horrorcons.com/calendar/" target="_blank" rel="noopener noreferrer" class=" text btn btn-outline-warning">SEE ALL</a></br>
+            <p>Have a convention you want to keep an eye on? Add it to the list!</p> <a href="https://horrorcons.com/calendar/" target="_blank" rel="noopener noreferrer" class="text btn btn-outline-warning">SEE ALL</a></br>
              <a href="/conventions/new" class="btn btn-outline-light btn-sm">Add Convention</a>
         </div>
-<div class="card container-fluid" style="width: 18rem;">
-    <ul>
+<div class="container" id="conContainer">
+    <div class="card-group">
+        <div class="row">
         <% for (let i = 0; i < cons.length; i++) { %>
-            <li>
-            <div class="card-body"> 
+            <div class="col-lg-3 col-md-6">
+                <div class="card mt-3">
+                <div class="card-body conBody">
                 <a href="/conventions/<%=cons[i]._id%>">
-                    <%= cons[i].name %> </br>
-                    <img src="<%= cons[i].img %>">  </br>
-                    <%= cons[i].date %> </br>
-                    <%= cons[i].location %> </br>
-                </a>
-                    <form action="/conventions/<%=cons[i].id%>?_method=DELETE" method="POST"> <input type="submit" value="DELETE"></form>
+                    <h1 class="conName"><%= cons[i].name %> </br></h1>
+                    <img class="card-img-top con-img img-thumbnail" style="width: 15rem; height: 8rem;" src="<%= cons[i].img %>">  </br>
+                    <p class="conText"><%= cons[i].date %> </br>
+                    <%= cons[i].location %> </br></p></a>
+                    <form class="conText" action="/conventions/<%=cons[i].id%>?_method=DELETE" method="POST"> <input type="submit" value="DELETE"></form>
+                </div>
+                </div>
             </div>
-            </li>
-        <% } %>
-    </ul>
+     <% } %>
+</div>
+    </div>
+    </div>
 </div>
 </body>
 </html>
