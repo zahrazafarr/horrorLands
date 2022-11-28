@@ -70,11 +70,12 @@ ul {
 }
 
 .nav a {
-    padding-left: 182px;
+    padding-left: 170px;
     position: relative;
     text-decoration: none;
-    color: white;
+    color: red;
     text-shadow: 0px 2px black;
+    font-family: 'Eater';
 }
 
 .nav {
